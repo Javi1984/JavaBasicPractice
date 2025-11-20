@@ -10,6 +10,8 @@ public class BinaryTreeImplementation {
         tree.insert(2);
         tree.insert(5);
 
-        tree.inOrder();;
+        //tree.inOrder();
+        //tree.preOrder();
+        tree.postOrder();
     }
 }

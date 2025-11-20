@@ -34,11 +34,35 @@ public class BinaryTree {
         inOrderRec(root);
     }
 
+    public void preOrder(){
+        preOrder(root);
+    }
+
+    public void postOrder(){
+        postOrder(root);
+    }
+
     public void inOrderRec(Node root){
         if(root != null){
             inOrderRec(root.left);
             System.out.print(root.data + " ");
             inOrderRec(root.right);
+        }
+    }
+
+    public void preOrder(Node root){
+        if(root != null){
+            System.out.print(root.data + " ");
+            preOrder(root.left);
+            preOrder(root.right);
+        }
+    }
+
+    public void postOrder(Node root){
+        if(root != null){
+            preOrder(root.left);
+            preOrder(root.right);
+            System.out.print(root.data + " ");
         }
     }
 
